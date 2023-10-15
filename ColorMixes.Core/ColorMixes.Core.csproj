@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ColorMixes.Infrastructure\ColorMixes.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
