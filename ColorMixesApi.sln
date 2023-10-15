@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorMixes.Core", "ColorMixes.Core\ColorMixes.Core.csproj", "{4AE4EA25-0341-482E-8433-9CA468D7E726}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorMixesApi.Core", "ColorMixes.Core\ColorMixesApi.Core.csproj", "{4AE4EA25-0341-482E-8433-9CA468D7E726}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorMixes.Infrastructure", "ColorMixes.Infrastructure\ColorMixes.Infrastructure.csproj", "{16919098-D16F-49EF-87A8-FB7D053169B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorMixesApi.Infrastructure", "ColorMixes.Infrastructure\ColorMixesApi.Infrastructure.csproj", "{16919098-D16F-49EF-87A8-FB7D053169B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorMixesApi.Web", "ColorMixesApi.Web\ColorMixesApi.Web.csproj", "{AABD6090-A4B9-435B-8C2D-24B54595BBBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorMixesApi.Web", "ColorMixesApi.Web\ColorMixesApi.Web.csproj", "{AABD6090-A4B9-435B-8C2D-24B54595BBBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

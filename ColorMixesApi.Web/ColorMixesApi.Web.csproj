@@ -16,12 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ColorMixes.Core\ColorMixes.Core.csproj" />
-    <ProjectReference Include="..\ColorMixes.Infrastructure\ColorMixes.Infrastructure.csproj" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\ColorMixes.Core\ColorMixesApi.Core.csproj" />
+    <ProjectReference Include="..\ColorMixes.Infrastructure\ColorMixesApi.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
