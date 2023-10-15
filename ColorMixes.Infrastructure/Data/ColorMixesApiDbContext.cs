@@ -19,6 +19,8 @@ namespace ColorMixes.Infrastructure.Data
         }
 
         public DbSet<Color> Colors { get; set; }
+        public DbSet<Combination> Combinations { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
