@@ -2,6 +2,7 @@
 using ColorMixes.Infrastructure.Models;
 using ColorMixesApi.Core.Helpers;
 using ColorMixesApi.Infrastructure.DTOs.Color;
+using Microsoft.EntityFrameworkCore;
 
 namespace ColorMixesApi.Core.Services
 {
@@ -21,6 +22,13 @@ namespace ColorMixesApi.Core.Services
             if(string.IsNullOrEmpty(newColor.Name))
             {
                 response.Message = "El nombre es incorrecto.";
+                response.Success = false;
+                return response;
+            }
+
+            if (await ColorExistsByName(newColor.Name))
+            {
+                response.Message = "El color ya existe.";
                 response.Success = false;
                 return response;
             }
@@ -52,6 +60,15 @@ namespace ColorMixesApi.Core.Services
 
                 return response;
             }
+        }
+
+        public async Task<bool> ColorExistsByName(string name)
+        {
+            var colors = await _context.Colors.ToListAsync();
+            var result = colors.Any(x => string.Equals(x.Name, name, StringComparison.OrdinalIgnoreCase));
+
+            return result;
+
         }
     }
 }
