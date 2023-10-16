@@ -62,6 +62,30 @@ namespace ColorMixesApi.Core.Services
             }
         }
 
+        public async Task<ServiceResponse<GetColorDto>> GetColorByName(string name)
+        {
+            var response = new ServiceResponse<GetColorDto>();
+
+            if (string.IsNullOrEmpty(name))
+            {
+                response.Message = "El nombre es incorrecto.";
+                response.Success = false;
+                return response;
+            }
+
+            if (!await ColorExistsByName(name))
+            {
+                response.Message = "El color no existe.";
+                response.Success = false;
+                return response;
+            }
+
+            var color = await _context.Colors.FirstOrDefaultAsync(x => x.Name == name);
+            response.Data = new GetColorDto { Id = color!.Id, Name = color.Name };
+
+            return response;
+        }
+
         public async Task<bool> ColorExistsByName(string name)
         {
             var colors = await _context.Colors.ToListAsync();

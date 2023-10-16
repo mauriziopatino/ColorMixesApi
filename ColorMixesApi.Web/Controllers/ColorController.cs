@@ -25,5 +25,13 @@ namespace ColorMixesApi.Web.Controllers
 
             return Ok(response);
         }
+
+        [HttpGet("GetColorByName")]
+        public async Task<ActionResult<ServiceResponse<GetColorDto>>> GetColorByName(string name)
+        {
+            var response = await _colorService.GetColorByName(name);
+
+            return Ok(response);
+        }
     }
 }
