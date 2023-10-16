@@ -1,4 +1,5 @@
 using ColorMixes.Infrastructure.Data;
+using ColorMixesApi.Core.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ColorMixesApiDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
+
+builder.Services.AddScoped<IColorService, ColorService>();
 
 var app = builder.Build();
 

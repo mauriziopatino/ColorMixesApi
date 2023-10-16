@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\ColorMixes.Core\ColorMixesApi.Core.csproj" />
     <ProjectReference Include="..\ColorMixes.Infrastructure\ColorMixesApi.Infrastructure.csproj" />
   </ItemGroup>
